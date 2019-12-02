@@ -25,3 +25,9 @@ Fix problem:
   8. flush privileges;
   7. exit;
   8. service mysql restart
+
+Test
+====================
+```
+myusql -u root -p
+```
