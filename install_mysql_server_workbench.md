@@ -4,6 +4,11 @@ Install mysql server
 sudo apt install mysql-server
 ```
 
+Set up you password
+```
+sudo mysql_secure_installation
+```
+
 Install mysql workbench
 ===================
 ```
