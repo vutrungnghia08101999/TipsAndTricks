@@ -20,8 +20,8 @@ Fix problem:
   6..  update user set plugin='mysql_native_password' where user='root';
 
   7. update user set Password='Password('my_password') where user='root';
-  or,
-      update user set authentication_string=password('my_password') where user='root';
+  or (use second command), 
+      update user set authentication_string=password('my_password') where user='root'; 
   8. flush privileges;
   7. exit;
   8. service mysql restart
