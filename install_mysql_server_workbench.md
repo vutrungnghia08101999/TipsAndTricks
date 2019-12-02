@@ -17,7 +17,7 @@ sudo apt install mysql-workbench
 
 Fix problem:
 ===================
-  1. open terminal
+  1. open terminal: sudo -s
   2. mysql -u root -p (enter)
   3. enter your password
   4. use mysql;
