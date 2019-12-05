@@ -1,1 +1,5 @@
-# favor-env
+# Remove vscode
+===============
+```
+sudo snap remove vscode
+```
