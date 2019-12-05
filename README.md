@@ -25,3 +25,13 @@ sudo apt-get remove dbconfig-mysql
 sudo apt-get dist-upgrade
 
 ```
+
+Python package
+```
+tensorflow==1.14.0
+pandas
+numpy
+scikit-learn
+xlsxwriter
+xlrd
+```
