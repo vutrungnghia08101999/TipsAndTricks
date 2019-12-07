@@ -35,3 +35,8 @@ scikit-learn
 xlsxwriter
 xlrd
 ```
+
+Synchronize folder in local machine to docker jupyter notebook
+```
+sudo docker run -p 8080:8888 -v /home/vutrungnghia/Desktop/root:/home/jovyan/work 7f1
+```
