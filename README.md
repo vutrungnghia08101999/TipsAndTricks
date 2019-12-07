@@ -40,3 +40,24 @@ Synchronize folder in local machine to docker jupyter notebook
 ```
 sudo docker run -p 8080:8888 -v /home/vutrungnghia/Desktop/root:/home/jovyan/work 7f1
 ```
+
+ssh_config_example
+```
+Compression yes
+
+Host MIT
+    Hostname 202.191.56.250
+    User nghiavt
+    Port 22
+
+Host Stanford
+    Hostname node72
+    User nghiavt
+    Port 22
+    ProxyJump MIT
+
+Host PTIT
+    Hostname 203.162.88.102
+    User namvh
+    Port 22
+```
