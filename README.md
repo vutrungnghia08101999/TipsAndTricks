@@ -61,6 +61,10 @@ Host PTIT
     User namvh
     Port 22
 ```
+Synchronize folder from local machine to remote server or reverse.
+```
+rsync  -az /home/vutrungnghia/Desktop/tmp PTIT:/home/namvh/Workspace/
+```
 Install dotnet unbuntu
 ```
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
