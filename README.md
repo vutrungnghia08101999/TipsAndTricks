@@ -63,7 +63,7 @@ Host PTIT
 ```
 Synchronize folder from local machine to remote server or reverse.
 ```
-rsync  -az /home/vutrungnghia/Desktop/tmp PTIT:/home/namvh/Workspace/
+rsync  -avz /home/vutrungnghia/Desktop/tmp PTIT:/home/namvh/Workspace/
 ```
 Install dotnet unbuntu
 ```
