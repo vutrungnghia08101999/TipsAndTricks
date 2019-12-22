@@ -12,6 +12,7 @@ Config vscode
         "terminal.foreground" : "#00FD61",
     },
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
 }
 ```
 
