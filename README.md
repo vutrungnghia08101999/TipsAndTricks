@@ -75,3 +75,7 @@ sudo apt-get install apt-transport-https
 sudo apt-get update
 sudo apt-get install dotnet-sdk-2.2
 ```
+Get public ip address on Linux
+```
+dig TXT +short o-o.myaddr.l.google.com @ns1.google.com
+```
