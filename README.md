@@ -81,9 +81,14 @@ dig TXT +short o-o.myaddr.l.google.com @ns1.google.com
 ```
 List processes with port
 ```
-sudo netstat -lpn
+netstat -lpn
 ```
 Auto reimport module to jupyter notebook
 ```
 %reload_ext autoreload
+```
+Running a Jupyter notebook from a remote server
+```
+jupyter notebook --no-browser --port=XXXX
+localuser@localhost: ssh -N -f -L localhost:YYYY:localhost:XXXX remoteuser@remotehost
 ```
