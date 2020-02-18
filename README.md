@@ -79,3 +79,7 @@ Get public ip address on Linux
 ```
 dig TXT +short o-o.myaddr.l.google.com @ns1.google.com
 ```
+List processes with port
+```
+sudo netstat -lpn
+```
