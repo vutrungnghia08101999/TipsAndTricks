@@ -83,3 +83,7 @@ List processes with port
 ```
 sudo netstat -lpn
 ```
+Auto reimport module to jupyter notebook
+```
+%reload_ext autoreload
+```
