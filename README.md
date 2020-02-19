@@ -92,3 +92,14 @@ Running a Jupyter notebook from a remote server
 jupyter notebook --no-browser --port=XXXX
 localuser@localhost: ssh -N -f -L localhost:YYYY:localhost:XXXX remoteuser@remotehost
 ```
+Log to file and console at the same time
+```
+logging.basicConfig(filename='logs.txt',
+                    filemode='a',
+                    format='%(asctime)s, %(levelname)s: %(message)s',
+                    datefmt='%y-%m-%d %H:%M:%S',
+                    level=logging.DEBUG)
+console = logging.StreamHandler()
+console.setLevel(logging.INFO)
+logging.getLogger().addHandler(console)
+```
