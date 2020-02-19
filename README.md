@@ -103,3 +103,7 @@ console = logging.StreamHandler()
 console.setLevel(logging.INFO)
 logging.getLogger().addHandler(console)
 ```
+Notebook to python script
+```
+jupyter nbconvert --to script [YOUR_NOTEBOOK].ipynb
+```
