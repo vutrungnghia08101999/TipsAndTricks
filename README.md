@@ -90,8 +90,8 @@ Auto reimport module to jupyter notebook
 ```
 Running a Jupyter notebook from a remote server
 ```
-jupyter notebook --no-browser --port=XXXX
-localuser@localhost: ssh -N -f -L localhost:YYYY:localhost:XXXX remoteuser@remotehost
+jupyter notebook --no-browser --port=9999
+ssh -N -f -L localhost:9999:localhost:9999 remoteuser@remotehost
 ```
 Log to file and console at the same time
 ```
