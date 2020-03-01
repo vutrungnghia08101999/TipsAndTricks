@@ -108,3 +108,11 @@ Notebook to python script
 ```
 jupyter nbconvert --to script [YOUR_NOTEBOOK].ipynb
 ```
+
+Change target version (JAVA)
+```
+    <properties>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+    </properties>
+```
