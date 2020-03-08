@@ -120,3 +120,11 @@ Empty docker
 ```
 sudo docker system prune -a --volumes
 ```
+Build conda environment in Docker
+```
+FROM continuumio/miniconda3
+ADD environment.yml environment.yml
+ADD env.yml env.yml
+RUN conda env create -f environment.yml
+RUN conda env create -f env.yml
+```
