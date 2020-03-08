@@ -116,3 +116,7 @@ Change target version (JAVA)
         <maven.compiler.target>1.6</maven.compiler.target>
     </properties>
 ```
+Empty docker 
+```
+sudo docker system prune -a --volumes
+```
