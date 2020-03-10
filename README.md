@@ -133,4 +133,7 @@ Docker
 docker system prune -a --volumes
 sudo docker login --username=08101999 --password-stdin=********
 sudo docker run --mount src=/home/vutrungnghia/Desktop,target=/home/workspace,type=bind -it 406f2b43ea59
+
+sudo docker commit container_id vutrungnghia99/benchmark_baselines:0
+sudo docker push vutrungnghia99/benchmark_baselines:0
 ```
