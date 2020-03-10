@@ -128,3 +128,8 @@ ADD env.yml env.yml
 RUN conda env create -f environment.yml
 RUN conda env create -f env.yml
 ```
+Docker 
+```
+docker system prune -a --volumes
+sudo docker login --username=08101999 --password-stdin=********
+```
