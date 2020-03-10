@@ -132,4 +132,5 @@ Docker
 ```
 docker system prune -a --volumes
 sudo docker login --username=08101999 --password-stdin=********
+sudo docker run --mount src=/home/vutrungnghia/Desktop,target=/home/workspace,type=bind -it 406f2b43ea59
 ```
