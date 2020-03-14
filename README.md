@@ -140,3 +140,8 @@ jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
 sudo docker commit container_id vutrungnghia99/benchmark_baselines:0
 sudo docker push vutrungnghia99/benchmark_baselines:0
 ```
+IP address and Location 
+```
+curl https://ipinfo.io/ip
+curl https://ipvigilante.com/202.191.56.67
+```
