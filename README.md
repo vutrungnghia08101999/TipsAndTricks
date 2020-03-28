@@ -145,3 +145,7 @@ IP address and Location
 curl https://ipinfo.io/ip
 curl https://ipvigilante.com/202.191.56.67
 ```
+Remove trash icon ubuntu 19.10
+```
+gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
+```
