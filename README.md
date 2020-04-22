@@ -149,3 +149,7 @@ Remove trash icon ubuntu 19.10
 ```
 gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
 ```
+Nvidia-trick
+```
+export LD_PRELOAD=/usr/lib64-nvidia/libnvidia-ml.so
+```
