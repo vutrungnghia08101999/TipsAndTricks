@@ -153,3 +153,7 @@ Nvidia-trick
 ```
 export LD_PRELOAD=/usr/lib64-nvidia/libnvidia-ml.so
 ```
+Check type RAM
+```
+sudo lshw -short -C memory
+```
