@@ -157,3 +157,25 @@ Check type RAM
 ```
 sudo lshw -short -C memory
 ```
+Read yaml
+```
+import yaml
+
+def read_yaml(filename: str):
+    with open(filename, 'r') as stream:
+        try:
+            return yaml.safe_load(stream)
+        except yaml.YAMLError as exc:
+            print(exc)
+```
+Read H5
+```
+import h5py
+
+def read_h5(filename: str):
+    data = {}
+    with h5py.File(filename, 'r') as f:
+        for key in tqdm(list(f.keys())):
+            data[key] = np.array(f[key])
+    return data
+```
