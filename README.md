@@ -179,3 +179,7 @@ def read_h5(filename: str):
             data[key] = np.array(f[key])
     return data
 ```
+Print red
+```
+print(f'\33[91m ....XXXX..... \33[0m')
+```
