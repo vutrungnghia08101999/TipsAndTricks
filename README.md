@@ -183,3 +183,44 @@ Print red
 ```
 print(f'\33[91m ....XXXX..... \33[0m')
 ```
+Plot 3D
+```
+import plotly.graph_objects as go
+import pandas as pd
+import numpy as np
+# Read data from a csv
+z_data = pd.read_csv('/home/vutrungnghia/Desktop/tmp.csv')
+s = np.array(z_data['Delay'])
+z = s.reshape(10, 11)
+sh_0, sh_1 = z.shape
+x, y = np.linspace(0, 0.9, sh_0), np.linspace(0, 1, sh_1)
+fig = go.Figure(data=[go.Surface(z=z, x=x, y=y)])
+# fig.update_layout(title='Mt Bruno Elevation', ,
+fig.update_layout(
+    width=1024,
+    height=1024,
+    autosize=False,
+    scene = dict(xaxis_title='PL',
+                yaxis_title='PR',
+                zaxis_title='Average delay (s)',
+                xaxis = dict(
+                         backgroundcolor="rgb(200, 200, 230)",
+                         gridcolor="white",
+                         showbackground=True,
+                         zerolinecolor="white",),
+                    yaxis = dict(
+                        backgroundcolor="rgb(230, 200,230)",
+                        gridcolor="white",
+                        showbackground=True,
+                        zerolinecolor="white"),
+                    zaxis = dict(
+                        backgroundcolor="rgb(230, 230,200)",
+                        gridcolor="white",
+                        showbackground=True,
+                        zerolinecolor="white",)),
+    margin=dict(l=65, r=50, b=65, t=90)
+)
+                    # width=700,
+                    # margin=dict(r=20, b=10, l=10, t=10))
+fig.show()
+```
