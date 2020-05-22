@@ -242,3 +242,7 @@ class AverageMeter(object):
         self.count += n
         self.avg = self.sum / self.count
 ```
+Run notebook with password
+```
+jupyter notebook --no-browser --port=9998 --ip='*' --NotebookApp.token='' --NotebookApp.password=''
+```
