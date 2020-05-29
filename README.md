@@ -246,3 +246,7 @@ Run notebook with password
 ```
 jupyter notebook --no-browser --port=9998 --ip='*' --NotebookApp.token='' --NotebookApp.password=''
 ```
+Revert to the last commit
+```
+git reset --hard HEAD
+```
