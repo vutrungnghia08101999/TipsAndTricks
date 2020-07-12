@@ -250,3 +250,6 @@ Revert to the last commit
 ```
 git reset --hard HEAD
 ```
+Mount HDD
+
+https://askubuntu.com/questions/1029040/how-to-manually-mount-a-partition
