@@ -251,5 +251,9 @@ Revert to the last commit
 git reset --hard HEAD
 ```
 Mount HDD
-
-https://askubuntu.com/questions/1029040/how-to-manually-mount-a-partition
+```
+sudo lsblk -o NAME,FSTYPE,LABEL,SIZE,MOUNTPOINT
+sudo mkdir /mnt/Ubuntu18.04
+sudo mount -t auto -v /dev/nvme0n1p8 /mnt/Ubuntu18.04
+```
+- LINK: https://askubuntu.com/questions/1029040/how-to-manually-mount-a-partition
