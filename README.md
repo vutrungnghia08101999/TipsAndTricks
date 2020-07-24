@@ -11,8 +11,45 @@ Config vscode
     "workbench.colorCustomizations" : {
         "terminal.foreground" : "#00FD61",
     },
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
     "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "files.associations": {
+
+
+
+
+
+    
+    },
+    "python.linting.flake8Args": [
+        "--max-line-length=1200",
+        "--ignore=E402,F841,F401,E302,E305",
+    ],
+    "python.dataScience.askForKernelRestart": false,
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 0,
+    "workbench.sideBar.location": "left",
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.rendererType": "dom",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "java.semanticHighlighting.enabled": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "python.languageServer": "Microsoft",
+    // "editor.fontSize": 16,
+    "files.watcherExclude": {
+        "**/dataset/train/**": true,
+        "**/dataset/test/**": true,
+        "**/dataset/**": true,
+        "**/data/**": true
+    },
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.codeActionsOnSave": null
 }
 ```
 
