@@ -294,3 +294,8 @@ sudo mkdir /mnt/Ubuntu18.04
 sudo mount -t auto -v /dev/nvme0n1p8 /mnt/Ubuntu18.04
 ```
 - LINK: https://askubuntu.com/questions/1029040/how-to-manually-mount-a-partition
+
+Hide top bar
+```
+sudo apt install gnome-shell-extension-autohidetopbar
+```
