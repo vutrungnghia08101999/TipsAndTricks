@@ -305,3 +305,7 @@ ssh-keygen -t rsa -b 4096 -C "01010101010110101101010101010101000101010111001010
 "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
+Full dark mode ubuntu 20.04
+```
+sudo apt install gnome-shell-extensions
+```
