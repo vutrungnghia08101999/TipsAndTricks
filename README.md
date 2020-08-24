@@ -309,3 +309,9 @@ Full dark mode ubuntu 20.04
 ```
 sudo apt install gnome-shell-extensions
 ```
+Run docker without sudo
+```
+sudo groupadd docker
+sudo gpasswd -a vutrungnghia docker
+# restart
+```
