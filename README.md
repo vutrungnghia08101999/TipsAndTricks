@@ -32,7 +32,7 @@ Config vscode
     "terminal.integrated.rendererType": "dom",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "python.jediEnabled": false,
+    "python.jediEnabled": true,
     "java.semanticHighlighting.enabled": true,
     "files.exclude": {
         "**/.classpath": true,
@@ -40,7 +40,7 @@ Config vscode
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Jedi",
     // "editor.fontSize": 16,
     "files.watcherExclude": {
         "**/dataset/train/**": true,
@@ -49,7 +49,9 @@ Config vscode
         "**/data/**": true
     },
     "C_Cpp.updateChannel": "Insiders",
-    "editor.codeActionsOnSave": null
+    "editor.codeActionsOnSave": null,
+    "terminal.integrated.inheritEnv": false,
+    "python.autoComplete.extraPaths": ["/media/vutrungnghia/New Volume/Project-III-GANS"],
 }
 ```
 
