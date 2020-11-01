@@ -22,7 +22,7 @@ Config vscode
     },
     "python.linting.flake8Args": [
         "--max-line-length=1200",
-        "--ignore=E402,F841,F401,E302,E305",
+        "--ignore=E402,E305,W293",
     ],
     "python.dataScience.askForKernelRestart": false,
     "explorer.confirmDelete": false,
@@ -51,6 +51,7 @@ Config vscode
     "C_Cpp.updateChannel": "Insiders",
     "editor.codeActionsOnSave": null,
     "terminal.integrated.inheritEnv": false,
+    "python.linting.flake8Enabled": true,
     "python.autoComplete.extraPaths": ["/media/vutrungnghia/New Volume/Project-III-GANS"],
 }
 ```
