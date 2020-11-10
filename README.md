@@ -324,3 +324,10 @@ sudo apt-get update
 sudo apt-get install terminator
 # uncheck profiles\\show titlebar
 ```
+Install ibus-unikey
+```
+sudo apt-get install ibus-unikey
+sudo add-apt-repository ppa:ubuntu-vn/ppa
+sudo apt-get update
+# restart laptop
+```
