@@ -305,7 +305,7 @@ sudo apt install gnome-shell-extension-autohidetopbar
 Generate rsa key for ssh
 ```
 ssh-keygen -t rsa -b 4096 -C "01010101010110101101010101010101000101010111001010101101010101"
-"$(ssh-agent -s)"
+eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 ```
 Full dark mode ubuntu 20.04
@@ -317,4 +317,10 @@ Run docker without sudo
 sudo groupadd docker
 sudo gpasswd -a vutrungnghia docker
 # restart
+```
+Install Terminator
+```
+sudo apt-get update
+sudo apt-get install terminator
+# uncheck profiles\\show titlebar
 ```
