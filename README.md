@@ -331,3 +331,7 @@ sudo add-apt-repository ppa:ubuntu-vn/ppa
 sudo apt-get update
 # restart laptop
 ```
+Count lines of code
+```
+git ls-files | xargs cat | wc -l
+```
