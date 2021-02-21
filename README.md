@@ -349,7 +349,7 @@ struct HeapTracker
 	{
 		std::cout << "Total allocated: " << totalAllocated << " - ";
 		std::cout << "Total freed: " << totalFreed << " - ";
-		std::cout << "Current usage: " << totalAllocated - totalFreed << std::endl;
+		std::cout << "Current usage: " << totalAllocated - totalFreed << " (bytes)" << std::endl;
 	}
 };
 
