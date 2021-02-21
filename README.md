@@ -335,3 +335,53 @@ Count lines of code
 ```
 git ls-files | xargs cat | wc -l
 ```
+Heap tracker C++
+```
+#include <iostream>
+#include <memory>
+
+struct HeapTracker
+{
+	uint32_t totalAllocated = 0;
+	uint32_t totalFreed = 0;
+
+	void showUsage()
+	{
+		std::cout << "Total allocated: " << totalAllocated << " - ";
+		std::cout << "Total freed: " << totalFreed << " - ";
+		std::cout << "Current usage: " << totalAllocated - totalFreed << std::endl;
+	}
+};
+
+HeapTracker heapTracker;
+
+void* operator new(size_t size)
+{
+    heapTracker.totalAllocated += size;
+	return malloc(size);
+}
+
+void operator delete(void* memory, size_t size)
+{
+	heapTracker.totalFreed += size;
+	free(memory);
+}
+
+struct Object
+{
+	int x, y, z;
+};
+
+int main()
+{
+	heapTracker.showUsage();
+	{
+		std::unique_ptr<Object> obj = std::make_unique<Object>();
+		heapTracker.showUsage();
+	}
+	heapTracker.showUsage();
+	Object* obj = new Object;
+	heapTracker.showUsage();
+	std::cin.get();
+}
+```
