@@ -385,3 +385,7 @@ int main()
 	std::cin.get();
 }
 ```
+Fix 'qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.'
+```
+sudo apt-get install --reinstall libxcb-xinerama0
+```
