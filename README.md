@@ -389,3 +389,42 @@ Fix 'qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even thoug
 ```
 sudo apt-get install --reinstall libxcb-xinerama0
 ```
+Timer C++
+```
+#include <iostream>
+#include <chrono>
+using namespace std;
+
+class Timer{
+private:
+    std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
+    string name;
+public:
+    Timer(string name)
+        : name(name)
+    {
+        start = std::chrono::high_resolution_clock::now();
+    }
+
+    ~Timer()
+    {
+        end = std::chrono::high_resolution_clock::now();
+
+        auto s = std::chrono::time_point_cast<std::chrono::milliseconds>(start).time_since_epoch().count();
+        auto e = std::chrono::time_point_cast<std::chrono::milliseconds>(end).time_since_epoch().count();
+
+        auto duration = e - s;
+        std::cout << name << ": " << (duration) << " ms\n";
+    }
+};
+
+int main()
+{
+    {
+        Timer timer("test");
+        int a;
+        for(int i = 0; i < 100000000; ++i)
+            a = a * 1.0;
+    }
+}
+```
