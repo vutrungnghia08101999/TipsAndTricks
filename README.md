@@ -388,6 +388,7 @@ int main()
 QT in Ubuntu
 
 Fix 'qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.'
+
 Fix Qt 5.12: Failed to find “GL/gl.h” in “/usr/include/libdrm”
 ```
 sudo apt-get install --reinstall libxcb-xinerama0
