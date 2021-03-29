@@ -385,9 +385,13 @@ int main()
 	std::cin.get();
 }
 ```
+QT in Ubuntu
+
 Fix 'qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.'
+Fix Qt 5.12: Failed to find “GL/gl.h” in “/usr/include/libdrm”
 ```
 sudo apt-get install --reinstall libxcb-xinerama0
+sudo apt install mesa-common-dev libglu1-mesa-dev
 ```
 Timer C++
 ```
