@@ -394,6 +394,12 @@ Fix Qt 5.12: Failed to find “GL/gl.h” in “/usr/include/libdrm”
 sudo apt-get install --reinstall libxcb-xinerama0
 sudo apt install mesa-common-dev libglu1-mesa-dev
 ```
+QT in Ubuntu
+
+Fix qmake compile error
+```
+sudo apt-get install build-essential
+```
 Timer C++
 ```
 #include <iostream>
