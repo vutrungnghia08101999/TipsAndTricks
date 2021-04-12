@@ -439,3 +439,8 @@ int main()
     }
 }
 ```
+Fast cin >> C++
+```
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+```
