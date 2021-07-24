@@ -451,6 +451,6 @@ find . -name "*.jar"
 Check folder size
 ```
 du -sh .
-du -hs .[]*
+du -hs .[^.]*
 ```
 
