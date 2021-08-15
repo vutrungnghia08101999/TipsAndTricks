@@ -454,3 +454,6 @@ du -sh .
 du -hs .[^.]*
 ```
 
+https://www.base64encode.org/
+
+https://www.base64decode.org/
