@@ -467,5 +467,5 @@ general_log = on
 general_log_file=/var/log/mysql/mysqld_general.log
 
 # restart mysql
-sysetmctl restart mysql
+systemctl restart mysql
 ```
