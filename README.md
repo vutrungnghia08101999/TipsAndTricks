@@ -457,3 +457,12 @@ du -hs .[^.]*
 https://www.base64encode.org/
 
 https://www.base64decode.org/
+
+Export general logs MySQL
+```bash
+nano /etc/mysql/my.cnf
+# Add these info
+[mysqld]
+general_log = on
+general_log_file=/var/log/mysql/mysqld_general.log
+```
