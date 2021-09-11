@@ -465,4 +465,7 @@ nano /etc/mysql/my.cnf
 [mysqld]
 general_log = on
 general_log_file=/var/log/mysql/mysqld_general.log
+
+# restart mysql
+sysetmctl restart mysql
 ```
