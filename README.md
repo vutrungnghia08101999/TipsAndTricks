@@ -469,3 +469,9 @@ general_log_file=/var/log/mysql/mysqld_general.log
 # restart mysql
 systemctl restart mysql
 ```
+Tmux
+```
+tmux new -s wso2
+Ctrl+B D
+tmux a -t wso2
+```
