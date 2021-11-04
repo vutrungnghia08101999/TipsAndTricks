@@ -475,3 +475,7 @@ tmux new -s wso2
 Ctrl+B D
 tmux a -t wso2
 ```
+Search string in folder
+```
+grep -rnw /home/walker -e "wanted string"
+```
