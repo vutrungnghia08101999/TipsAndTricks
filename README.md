@@ -454,10 +454,6 @@ du -sh .
 du -hs .[^.]*
 ```
 
-https://www.base64encode.org/
-
-https://www.base64decode.org/
-
 Export general logs MySQL
 ```bash
 nano /etc/mysql/my.cnf
@@ -474,8 +470,17 @@ Tmux
 tmux new -s wso2
 Ctrl+B D
 tmux a -t wso2
+Ctr+ B [
+q
 ```
 Search string in folder
 ```
 grep -rnw /home/walker -e "wanted string"
+```
+Check PC BIOS release date
+```
+for d in system-manufacturer system-product-name bios-release-date bios-version
+do
+   echo "${d^} : " $(sudo dmidecode -s $d)
+done
 ```
