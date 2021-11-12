@@ -484,3 +484,8 @@ do
    echo "${d^} : " $(sudo dmidecode -s $d)
 done
 ```
+Linux Kernel
+```
+ rpm -qa kernel
+ uname -r
+```
