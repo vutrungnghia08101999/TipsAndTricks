@@ -489,3 +489,15 @@ Linux Kernel
  rpm -qa kernel
  uname -r
 ```
+Add to Desktop applications Linux
+```
+# /usr/share/applications/atom.desktop
+
+[Desktop Entry]
+Name=Atom
+Exec=/usr/local/bin/atom
+StartupNotify=true
+Terminal=false
+Type=Application
+Icon=/usr/local/share/atom/resources/app/resources/atom.png
+```
