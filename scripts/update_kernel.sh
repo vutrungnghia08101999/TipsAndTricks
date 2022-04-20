@@ -22,7 +22,7 @@ echo "Kernel version: $KERNEL_VERSION"
 echo "Kernel config: $KERNEL_CONFIG"
 
 if [[ $(findmnt -M "$BOOT_MOUNT_POINT") ]]; then
-    echo "Boot partition has already been mount, skip"
+    echo "Boot partition has already been mount, skip mounting"
 else
     echo "Boot partition has not been mount"
     echo "Mount $BOOT_PARTITION at $BOOT_MOUNT_POINT"
@@ -31,8 +31,40 @@ else
     echo "Successfully mount $BOOT_PARTITION at $BOOT_MOUNT_POINT"
 fi
 
-sudo cp $KERNEL_JAR $SRC/ && sudo rm $KERNEL_JAR && cd $SRC
-sudo tar xpvf $KERNEL_JAR && sudo rm $KERNEL_JAR
+if [ ! -f $KERNEL_JAR ]; then
+    echo "$KERNEL_JAR does not exist"
+    exit 1
+fi
+
+if [ ! -f $SRC/$KERNEL_JAR ]; then
+    sudo cp $KERNEL_JAR $SRC/
+else
+    echo "$PWD/$KERNEL_JAR had already been copied to $SRC, skip copy"
+fi
+
+if [ -f $KERNEL_JAR ]; then
+    sudo rm $KERNEL_JAR
+    echo "Removed: $PWD/$KERNEL_JAR"
+else
+    echo "$PWD/$KERNEL_JAR does not exist, skip removing"
+fi
+
+cd $SRC
+echo "Current working directory: $PWD"
+
+if [ ! -d $KERNEL_VERSION ]; then
+    sudo tar xpvf $KERNEL_JAR
+else
+    echo "$PWD/$KERNEL_VERSION had already been existed, skip extracting $KERNEL_JAR"
+fi
+
+if [ -f $KERNEL_JAR ]; then
+    sudo rm $KERNEL_JAR
+    echo "Removed: $PWD/$KERNEL_JAR"
+else
+    echo "$PWD/$KERNEL_JAR does not exist, skip removing"
+fi
+
 sudo cp $SRC/linux/.config $SRC/$KERNEL_VERSION/
 cd $KERNEL_VERSION
 sudo make oldconfig
