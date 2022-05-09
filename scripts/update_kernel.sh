@@ -47,6 +47,7 @@ echo "Current working directory: $PWD"
 
 if [ ! -d $KERNEL_VERSION ]; then
     sudo tar xpvf $KERNEL_JAR
+    sudo cp $SRC/linux/.config $SRC/$KERNEL_VERSION/
 else
     echo "$PWD/$KERNEL_VERSION had already been existed, skip extracting $KERNEL_JAR"
 fi
@@ -58,7 +59,6 @@ else
     echo "$PWD/$KERNEL_JAR does not exist, skip removing"
 fi
 
-sudo cp $SRC/linux/.config $SRC/$KERNEL_VERSION/
 cd $KERNEL_VERSION
 sudo make oldconfig
 sudo eselect kernel set $KERNEL_VERSION
