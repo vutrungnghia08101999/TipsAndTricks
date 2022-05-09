@@ -42,13 +42,6 @@ else
     echo "$PWD/$KERNEL_JAR had already been copied to $SRC, skip copy"
 fi
 
-if [ -f $KERNEL_JAR ]; then
-    sudo rm $KERNEL_JAR
-    echo "Removed: $PWD/$KERNEL_JAR"
-else
-    echo "$PWD/$KERNEL_JAR does not exist, skip removing"
-fi
-
 cd $SRC
 echo "Current working directory: $PWD"
 
@@ -71,4 +64,5 @@ sudo make oldconfig
 sudo eselect kernel set $KERNEL_VERSION
 sudo make -j8 && sudo make -j8 modules_install && sudo make install
 sudo genkernel --install --kernel-config=$BOOT_MOUNT_POINT/$KERNEL_CONFIG initramfs
-sudo eclean-kernel -n 2
+sudo eclean-kernel -n 5
+
