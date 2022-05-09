@@ -64,5 +64,6 @@ sudo make oldconfig
 sudo eselect kernel set $KERNEL_VERSION
 sudo make -j8 && sudo make -j8 modules_install && sudo make install
 sudo genkernel --install --kernel-config=$BOOT_MOUNT_POINT/$KERNEL_CONFIG initramfs
-sudo eclean-kernel -n 5
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+# sudo eclean-kernel -n 5
 
